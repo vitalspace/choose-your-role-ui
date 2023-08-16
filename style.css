@@ -1,0 +1,110 @@
+* {
+  margin: 0%;
+  padding: 0%;
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #bec0ba;
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      background: #fafaf5;
+      padding: 2em;
+      border-radius: 1em;
+      font-family: sans-serif;
+
+      > header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        
+        & div {
+          display: flex;
+          justify-content: space-between;
+
+          > button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            place-items: center;
+            padding: 0 0.4em;
+            transition: 0.2s;
+            border: 1px solid #ccc;
+
+            &:hover {
+              border: 1px solid #d0ea69;
+              border-radius: 50%;
+              background: black;
+              color: #d0ea69;
+            }
+          }
+        }
+
+        & p {
+          font-size: 14px;
+        }
+
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1em;
+
+        .grid-item {
+          border-radius: 1em;
+          background: white;
+          height: 9;
+          padding: 1em;
+          word-break: break-all;
+          box-shadow: 0 1px 10px #ccc;
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+
+          & header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & h2 {
+              font-size: 16px;
+            }
+
+            & img {
+              border-radius: 50%;
+              width: 1em;
+              padding: 0.5em;
+              background: black;
+            }
+          }
+
+          & p {
+            font-size: 12px;
+          }
+        }
+
+        .grid-item:nth-child(2) {
+          color: white;
+            background: #24292b;
+          > header > img {
+            background: #d0ea69;
+          }
+        }
+      }
+
+      @media (width >= 768px) {
+        width: 30%;
+      }
+
+    }
+  }
+}
